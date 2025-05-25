@@ -1,0 +1,61 @@
+/* Aurora gradient background animation */
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(60deg, #001f3f, #0074D9, #7FDBFF, #39CCCC, #001f3f);
+    background-size: 300% 300%;
+    animation: aurora 20s ease infinite;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  @keyframes aurora {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Clock container setup */
+  #clock-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    z-index: 10;
+  }
+  
+  /* Date wrapper with blur */
+  #date-wrapper {
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+  }
+  
+  #date {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+  }
+  
+  /* Clock styling */
+  #clock {
+    font-family: monospace;
+    font-size: 6.5rem;
+    font-weight: bold;
+    color: rgba(243, 240, 233, 1);
+    text-align: center;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
